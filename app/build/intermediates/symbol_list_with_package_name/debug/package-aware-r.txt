@@ -2957,6 +2957,7 @@ id honorRequest
 id horizontal
 id horizontal_only
 id icon
+id iconStar
 id icon_group
 id icon_only
 id ifRoom
@@ -3222,6 +3223,7 @@ id txt_gia_dl
 id txt_gia_trangchu
 id txt_mota_dl
 id txt_name_trangchu
+id txt_start
 id txt_tenfood_dl
 id unchecked
 id uniform

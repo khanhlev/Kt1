@@ -68,13 +68,13 @@ public class Add_MainActivity extends AppCompatActivity {
                 .setValue(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(Add_MainActivity.this,"Thêm móm ăn thành công!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Add_MainActivity.this,"Thêm ca sĩ thành công!",Toast.LENGTH_SHORT).show();
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Add_MainActivity.this,"Thêm món ăn thất bại!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Add_MainActivity.this,"Thêm ca sĩ thất bại!",Toast.LENGTH_SHORT).show();
 
                     }
                 });

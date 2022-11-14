@@ -21,6 +21,9 @@ public final class CustomDongFoodBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final ImageView iconStar;
+
+  @NonNull
   public final ImageView imgDl;
 
   @NonNull
@@ -36,17 +39,23 @@ public final class CustomDongFoodBinding implements ViewBinding {
   public final TextView txtMotaDl;
 
   @NonNull
+  public final TextView txtStart;
+
+  @NonNull
   public final TextView txtTenfoodDl;
 
-  private CustomDongFoodBinding(@NonNull LinearLayout rootView, @NonNull ImageView imgDl,
-      @NonNull ImageView imgEdit, @NonNull ImageView imgRemove, @NonNull TextView txtGiaDl,
-      @NonNull TextView txtMotaDl, @NonNull TextView txtTenfoodDl) {
+  private CustomDongFoodBinding(@NonNull LinearLayout rootView, @NonNull ImageView iconStar,
+      @NonNull ImageView imgDl, @NonNull ImageView imgEdit, @NonNull ImageView imgRemove,
+      @NonNull TextView txtGiaDl, @NonNull TextView txtMotaDl, @NonNull TextView txtStart,
+      @NonNull TextView txtTenfoodDl) {
     this.rootView = rootView;
+    this.iconStar = iconStar;
     this.imgDl = imgDl;
     this.imgEdit = imgEdit;
     this.imgRemove = imgRemove;
     this.txtGiaDl = txtGiaDl;
     this.txtMotaDl = txtMotaDl;
+    this.txtStart = txtStart;
     this.txtTenfoodDl = txtTenfoodDl;
   }
 
@@ -77,6 +86,12 @@ public final class CustomDongFoodBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.iconStar;
+      ImageView iconStar = ViewBindings.findChildViewById(rootView, id);
+      if (iconStar == null) {
+        break missingId;
+      }
+
       id = R.id.img_dl;
       ImageView imgDl = ViewBindings.findChildViewById(rootView, id);
       if (imgDl == null) {
@@ -107,14 +122,20 @@ public final class CustomDongFoodBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_start;
+      TextView txtStart = ViewBindings.findChildViewById(rootView, id);
+      if (txtStart == null) {
+        break missingId;
+      }
+
       id = R.id.txt_tenfood_dl;
       TextView txtTenfoodDl = ViewBindings.findChildViewById(rootView, id);
       if (txtTenfoodDl == null) {
         break missingId;
       }
 
-      return new CustomDongFoodBinding((LinearLayout) rootView, imgDl, imgEdit, imgRemove, txtGiaDl,
-          txtMotaDl, txtTenfoodDl);
+      return new CustomDongFoodBinding((LinearLayout) rootView, iconStar, imgDl, imgEdit, imgRemove,
+          txtGiaDl, txtMotaDl, txtStart, txtTenfoodDl);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

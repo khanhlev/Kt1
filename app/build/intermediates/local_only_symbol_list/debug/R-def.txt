@@ -118,6 +118,7 @@ id edt_motamonan
 id edt_tenmonan
 id floatingActionButton
 id fragment_container
+id iconStar
 id imageviewBack_SU
 id img_dl
 id img_edit
@@ -135,6 +136,7 @@ id txt_gia_dl
 id txt_gia_trangchu
 id txt_mota_dl
 id txt_name_trangchu
+id txt_start
 id txt_tenfood_dl
 id view_pager
 layout activity_add_main
